@@ -4,9 +4,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://10.10.4.207:3306/dbgirl?characterEncoding=UTF-8&useUnicode=true&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
-    username: dalong
-    password: rotrot
+    url: jdbc:mysql://127.0.0.1:3306/dbgirl?characterEncoding=UTF-8&useUnicode=true&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
   jpa:
     hibernate:
       ddl-auto: update
