@@ -1,9 +1,8 @@
 package com.dalongm.girl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author dalongm
@@ -13,20 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-//    @Value("${cupSize}")
-//    private String cupSize;
-//
-//    @Value("${age}")
-//    private Integer age;
-//
-//    @Value("${content}")
-//    private String content;
-
     @Autowired
     private GirlProperties girlProperties;
 
-    @RequestMapping(value="/hello", method = RequestMethod.GET)
-    public String say(){
-        return girlProperties.toString();
+    //    @RequestMapping(value={"/hello","/hi"}, method = RequestMethod.GET)
+    @GetMapping(value = "/say")
+    public String say(@RequestParam(value = "id", required = false, defaultValue = "0") Integer id) {
+    //    return girlProperties.toString();
+        return "id: " + id;
     }
 }
