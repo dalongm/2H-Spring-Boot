@@ -49,7 +49,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 ```
-3. 显示启用配置属性类
+3. 显式启用配置属性类
 ```java
 @EnableConfigurationProperties(GirlProperties.class)
 public class GirlApplication {}
